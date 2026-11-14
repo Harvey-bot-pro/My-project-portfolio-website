@@ -1,0 +1,125 @@
+[
+  {
+    "repo": "-Council-Tax-property-counts-as-at-31-March-2026-Source-Valuation-Office-Agency.",
+    "id": "council",
+    "name": "Council Tax Property Counts",
+    "title": "From government data to regional insight.",
+    "cat": "SQL & data modelling",
+    "tools": [
+      "Python",
+      "MySQL",
+      "Power BI"
+    ],
+    "image": "Screenshot 2026-11-08 233549 - Copy.jpg",
+    "problem": "National totals conceal differences in property volumes and band mix. Compare regions and local authorities separately to avoid counting overlapping geographic levels twice.",
+    "approach": "Retrieved source data using Python and an API, retained raw fields in MySQL, converted valid counts into numeric columns and built separate regional and local authority analysis views. Connected Power BI to MySQL for slicers, rankings, composition charts and an Azure map.",
+    "result": "The report covers 318 local authorities and nine English regions. Bands A\u2013C account for 82.95% in the North East versus 43.86% in London: a 39.09 percentage point gap. In Wales, Blaenau Gwent leads A\u2013C share at 90.53%, while Monmouthshire leads F\u2013H share at 34.58%.",
+    "note": "Property stock as at 31 March 2026. Missing or suppressed counts remain unavailable rather than zero; Band I is treated separately for Wales. Counts and band shares do not estimate current prices or tax revenue. Geographic levels are analysed separately.",
+    "stat": "39.09 pp",
+    "label": "North East\u2013London gap in A\u2013C share",
+    "url": "https://github.com/Harvey-bot-pro/-Council-Tax-property-counts-as-at-31-March-2026-Source-Valuation-Office-Agency.",
+    "download": "projects/council-tax-complete-project.zip"
+  },
+  {
+    "repo": "Customer-Retention-Sales-Analysis",
+    "id": "retention",
+    "name": "Customer Retention & Sales Analysis",
+    "title": "Repeat customers. A different retention story.",
+    "cat": "Customer analytics",
+    "tools": [
+      "Excel",
+      "Power Query",
+      "Power Pivot",
+      "DAX"
+    ],
+    "image": "Customer-Retention-Sales-Analysis-0.png",
+    "problem": "Understand acquisition, repeat purchasing and immediate monthly retention without confusing different customer definitions.",
+    "approach": "Cleaned 8,432 sales lines, built a fact and dimension model in Excel and used DAX customer sets to compare true consecutive year-month periods.",
+    "result": "The project report identifies 2,551 customers and about $4.54M net revenue. About 85.4% purchased in multiple months, while weighted next-month retention through 2025 was about 8.4%. This points to delayed repurchasing rather than monthly continuity.",
+    "note": "The screenshot\u2019s 20% retention / 80% churn is filter dependent and is not the report\u2019s overall consecutive-month result. New and returning customer cards also depend on the selected period. 2026 is partial.",
+    "stat": "85.4%",
+    "label": "Purchased in multiple months",
+    "url": "https://github.com/Harvey-bot-pro/Customer-Retention-Sales-Analysis",
+    "download": "https://github.com/Harvey-bot-pro/Customer-Retention-Sales-Analysis/archive/refs/heads/main.zip"
+  },
+  {
+    "repo": "Restaurant-sales-analysis",
+    "id": "restaurant",
+    "name": "Chop Stick Restaurant Sales Analysis",
+    "title": "What brings value to the table?",
+    "cat": "Business intelligence",
+    "tools": [
+      "Excel"
+    ],
+    "image": "Restaurant-sales-analysis-0.jpg",
+    "problem": "Help restaurant management understand menu performance, busy service periods, payment patterns and reservations.",
+    "approach": "Analysed 1,000 transactions in Excel with formulas, PivotTables, charts and slicers across meal, cuisine, payment and calendar categories. Reviewed KPI formula interpretation.",
+    "result": "Dinner generated \u00a320,930.50 revenue; Chinese cuisine led at \u00a312,690.25. Peking Duck was the highest revenue item at \u00a35,450. These findings help prioritise dinner staffing and menu decisions.",
+    "note": "The report corrects the screenshot\u2019s reservation percentage: 599 of 1,000 transactions is 59.9%. Apply percentage formatting once rather than multiplying by 100 as well.",
+    "stat": "1,000",
+    "label": "Restaurant transactions analysed",
+    "url": "https://github.com/Harvey-bot-pro/Restaurant-sales-analysis",
+    "download": "https://github.com/Harvey-bot-pro/Restaurant-sales-analysis/archive/refs/heads/main.zip"
+  },
+  {
+    "repo": "HMRC-NORTH-EAST-SPENDING-ANALYSIS",
+    "id": "hmrc",
+    "name": "HMRC Spending Analysis",
+    "title": "Following the public pound.",
+    "cat": "Business intelligence",
+    "tools": [
+      "Excel",
+      "Power Query",
+      "Power Pivot",
+      "DAX"
+    ],
+    "image": "HMRC-NORTH-EAST-SPENDING-ANALYSIS-0.jpg",
+    "problem": "Turn transaction detail into a view of supplier concentration, cost drivers and unusually large payments.",
+    "approach": "Prepared June 2026 expenditure in Power Query, built a star schema in Power Pivot and created DAX measures, transaction bands and interactive reporting. Preserved valid repeated fact records while deduplicating dimension keys.",
+    "result": "The project report records \u00a3335.78M expenditure across 1,397 rows and 159 suppliers. The five largest suppliers received 45.4% of expenditure; 56 transactions in the \u00a31M+ band accounted for about \u00a3174.18M.",
+    "note": "Period: June 2026. The repository is named North East, but the report describes HMRC expenditure and does not establish that every payment is geographically restricted to the North East.",
+    "stat": "45.4%",
+    "label": "Spend with the five largest suppliers",
+    "url": "https://github.com/Harvey-bot-pro/HMRC-NORTH-EAST-SPENDING-ANALYSIS",
+    "download": "https://github.com/Harvey-bot-pro/HMRC-NORTH-EAST-SPENDING-ANALYSIS/archive/refs/heads/main.zip"
+  },
+  {
+    "repo": "Mortality-in-England-SQL",
+    "id": "mortality",
+    "name": "Mortality in England SQL Analysis",
+    "title": "Reading the patterns behind mortality.",
+    "cat": "SQL & data modelling",
+    "tools": [
+      "MySQL",
+      "SQL"
+    ],
+    "image": "Mortality-in-England-SQL-0.png",
+    "problem": "Compare mortality across time, region, age and sex while handling suppressed rates and avoiding misleading aggregation.",
+    "approach": "Cleaned and modelled 31,080 monthly records in MySQL with date, area, sex and age dimensions. Treated non-calculable rates as missing rather than real values and queried trends with joins and grouped comparisons.",
+    "result": "The documented all-region average directly standardised rate rose 14.4% from 2019 to 2020. By 2025 it was about 14.9% below 2020. The analysis also compares seasonal and regional patterns.",
+    "note": "Data covers January 2014 to April 2026; 2026 is incomplete. Rate comparisons use the report\u2019s Persons, All ages, All regions selection and are descriptive, not causal.",
+    "stat": "31,080",
+    "label": "Monthly fact records modelled",
+    "url": "https://github.com/Harvey-bot-pro/Mortality-in-England-SQL",
+    "download": "https://github.com/Harvey-bot-pro/Mortality-in-England-SQL/archive/refs/heads/main.zip"
+  },
+  {
+    "repo": "Poultry-Business-Performance-Analysis-Power-BI",
+    "id": "poultry",
+    "name": "Poultry Business Performance Analysis",
+    "title": "A joined-up view of poultry operations.",
+    "cat": "Business intelligence",
+    "tools": [
+      "Power BI"
+    ],
+    "image": null,
+    "problem": "Bring production, quality, inventory and sales performance into a coherent business reporting view.",
+    "approach": "Developed a Power BI analysis spanning these operational areas. The original PBIX file is available in the project repository for review in Power BI Desktop.",
+    "result": "Delivered a Power BI project for exploring poultry business performance. The repository does not publish a detailed findings report, so no numerical performance claim is made here.",
+    "note": "The repository contains an approximately 83.5 MB PBIX file. The cover is an illustrative graphic; a verified dashboard screenshot is not available.",
+    "stat": "Power BI",
+    "label": "Production \u00b7 Quality \u00b7 Inventory \u00b7 Sales",
+    "url": "https://github.com/Harvey-bot-pro/Poultry-Business-Performance-Analysis-Power-BI",
+    "download": "https://github.com/Harvey-bot-pro/Poultry-Business-Performance-Analysis-Power-BI/archive/refs/heads/main.zip"
+  }
+]
